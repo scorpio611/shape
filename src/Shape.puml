@@ -1,0 +1,60 @@
+@startuml
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+
+Rectangle <|- Square
+
+class Shape {
+-String color = "red"
+-boolean filled = "true"
+
++Shape()
++Shape(String color, boolean filled)
++getColor():String
++setColor(String color):String
++isFilled():boolean
++setFilled(filled:boolean):void
++**toString():String**
+}
+
+class Circle {
+-double radius = 1.0
+
++Circle()
++Circle(double radius)
++Circle(double radius, String color, boolean filled)
++getRadius():double
++setRadius(double radius):void
++getArea():double
++getPerimeter():double
++**toString():String**
+}
+
+class Rectangle{
+-double width = 1.0
+-double length = 1.0
+
++Rectangle()
++Rectangle(double width, double length)
++Rectangle(double width, double length, String color, boolean filled)
++getWidth():double
++setWidth(double width):void
++getLength():double
++setLength(double length):void
++getArea():double
++getPerimeter():double
++**toString():String**
+}
+
+class Square {
++Square()
++Square(double side)
++Square(double side, String color, boolean filled)
++getSide():double
++setSide(double side):void
++**setWidth(double side):void**
++**setLength(double side):void**
++**toString():String**
+}
+@enduml
